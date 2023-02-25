@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon32x32.png">
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body class="page">
+    <header class="sr-only page__header">
+      <h1>Frontend Mentor | Multi-step form</h1>
+    </header>
+    <main class="main page__main">
+      <div class="sidebar">
+        <picture class="sidebar__picture">
+          <source srcset="../../assets/images/bg-sidebar-desktop.svg" media="(min-width: 36em)" width="274" height="568"><img class="sidebar__img" src="../../assets/images/bg-sidebar-mobile.svg" alt="" width="375" height="172">
+        </picture>
+        <div class="step">
+          <div class="step__nbr">1</div>
+          <p class="step__content"><span class="step__title">STEP 1</span><span class="step__desc">YOUR INFO</span></p>
+        </div>
+        <div class="step">
+          <div class="step__nbr">2</div>
+          <p class="step__content"><span class="step__title">STEP 2</span><span class="step__desc">SELECT-PLAN</span></p>
+        </div>
+        <div class="step">
+          <div class="step__nbr">3</div>
+          <p class="step__content"><span class="step__title">STEP 3</span><span class="step__desc">ADD-ONS</span></p>
+        </div>
+        <div class="step">
+          <div class="step__nbr">4</div>
+          <p class="step__content"><span class="step__title">STEP 4</span><span class="step__desc">SUMMARY</span></p>
+        </div>
+      </div>
+      <form class="billing-form" action="javascript:void(0)" method="POST">
+        <hgroup class="intro">
+          <h2 class="intro__title">Personal info</h2>
+          <p class="intro__subtitle">Please provide your name, email address, and phone number.</p>
+        </hgroup>
+        <div class="billing-form__content">
+          <div class="linput">
+            <label class="linput__label" for="fullname">Name</label>
+            <input class="linput__input" id="fullname" name="fullname" placeholder="e.g. Stephen King" type="text"/>
+          </div>
+          <div class="linput">
+            <label class="linput__label" for="email">Email Address</label>
+            <input class="linput__input" id="email" name="email" placeholder="e.g. stephenking@lorem.com" type="text"/>
+          </div>
+          <div class="linput">
+            <label class="linput__label" for="phone">Phone Number</label>
+            <input class="linput__input" id="phone" name="phone" placeholder="e.g. +1 234 567 890" type="text"/>
+          </div>
+        </div>
+        <div class="billing-form__footer">
+          <button class="primary-btn">Next Step</button>
+        </div>
+      </form>
+    </main>
+    <footer class="page__footer">
+      <div class="attribution">
+        <p class="attribution__desc">Challenge by<a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+        <p class="attribution__desc">Coded by<a class="attribution__link" href="https://github.com/c-MatMaka-r" target="_blank">MatMaka</a>.</p>
+      </div>
+    </footer>
+  </body>
+</html>

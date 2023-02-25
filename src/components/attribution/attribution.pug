@@ -1,0 +1,9 @@
+include ./data.pug
+
+if attributionData.length > 0
+
+	.attribution
+		
+		each item in attributionData	
+
+			+attributionLink(item)

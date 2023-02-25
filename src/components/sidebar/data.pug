@@ -1,0 +1,32 @@
+-
+	const sidebarData = [
+
+		{
+		  title: "step",
+			desc: "your info",
+		},
+
+		{
+		  title: "step",
+			desc: "select-plan",
+		},
+
+		{
+		  title: "step",
+			desc: "add-ons",
+		},
+
+		{
+		  title: "step",
+			desc: "summary",
+		},
+
+	];
+
+//- gen nbr
+each item, key in sidebarData
+
+	- const nbr = key + 1
+
+	- item.nbr = nbr
+	- item.title = `${item.title} ${nbr}`
