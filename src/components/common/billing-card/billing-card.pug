@@ -1,27 +1,13 @@
 include data.pug
 
 if billingFormData
-
-  form.billing-form(
-    action="javascript:void(0)"
-    method="POST"
-  )
-
-    +intro(
-      {
-        title: billingFormData.title,
-        subtitle: billingFormData.subtitle,
-      }
-    )
+  form.billing-form(action="javascript:void(0)", method="POST")
+    +intro({ title: billingFormData.title, subtitle: billingFormData.subtitle, })
 
     .billing-form__content
-
       if billingFormData.linputs.length > 0
-
         each linputData in billingFormData.linputs
-
           +linput(linputData)
 
     .billing-form__footer
-
       include ../primary-btn/primary-btn.pug

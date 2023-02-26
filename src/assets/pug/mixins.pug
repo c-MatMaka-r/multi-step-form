@@ -1,43 +1,31 @@
 mixin attributionLink(dataObj)
-
-  p.attribution__desc= dataObj.desc.title 
-
-    a.attribution__link(
-      href=dataObj.link.href
-      target="_blank"
-    )= dataObj.link.title 
+  p.attribution__desc= dataObj.desc.title
+    a.attribution__link(href=dataObj.link.href, target="_blank")= dataObj.link.title
 
     | .
 
 mixin step(dataObj)
-
   .step
-
     .step__nbr= dataObj.nbr
-    
-    p.step__content
 
+    p.step__content
       span.step__title= dataObj.title.toUpperCase()
-      
+
       span.step__desc= dataObj.desc.toUpperCase()
 
 mixin intro(dataObj)
-
   hgroup.intro
-
     h2.intro__title= dataObj.title
-    
+
     p.intro__subtitle= dataObj.subtitle
 
-
 mixin linput(dataObj)
-
   .linput
     label.linput__label(for=dataObj.label.for)= dataObj.label.name
 
     input.linput__input(
-      id=dataObj.label.for
-      name=dataObj.label.for
-      placeholder=dataObj.input.placeholder
+      id=dataObj.label.for,
+      name=dataObj.label.for,
+      placeholder=dataObj.input.placeholder,
       type=dataObj.input.type
-  ) 
+    ) 

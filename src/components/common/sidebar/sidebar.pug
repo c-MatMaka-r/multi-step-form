@@ -1,25 +1,21 @@
 include ./data.pug
 
 if sidebarData.length > 0
+  .sidebar
+    picture.sidebar__picture
+      source(
+        srcset="./assets/images/bg-sidebar-desktop.svg",
+        media=`(min-width: ${breakpoints.sm})`,
+        width="274",
+        height="568"
+      )
 
-	.sidebar
+      img.sidebar__img(
+        src="./assets/images/bg-sidebar-mobile.svg",
+        alt="",
+        width="375",
+        height="172"
+      )
 
-		picture.sidebar__picture
-
-			source(
-				srcset="../../assets/images/bg-sidebar-desktop.svg"
-				media=`(min-width: ${breakpoints.sm})`
-			  width="274"
-				height="568"
-			)
-
-			img.sidebar__img(
-				src="../../assets/images/bg-sidebar-mobile.svg" 
-				alt=""
-				width="375"
-				height="172"
-			)
-
-		each item in sidebarData
-
-			+step(item)
+    each item in sidebarData
+      +step(item)
